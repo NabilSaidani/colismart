@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="formulaire.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="form_contener">
+      <form method="POST" action="traitement.php">
+        <div id="content_main">
+          <div class="content_left">
+            <fieldset>
+              <legend>Contrôle d'acheminement</legend>
+              <input
+                type="text"
+                name="id_colis"
+                id="id_colis"
+                placeholder="ID Colis"
+                pattern="[0-9]+"
+                required
+              />
+              <input
+                type="text"
+                name="lieu"
+                id="lieu_id"
+                placeholder="Lieu"
+                pattern="[A-Za-z]+"
+                required
+              />
+              <div>
+                <input type="radio" id="depart" name="etat" value="départ" required/>
+                <label for="depart">Départ</label>
+              </div>
+              <div>
+                <input type="radio" id="acheminement" name="etat" value="acheminement" required>
+                <label for="acheminement">En cours d'acheminement</label>
+              </div>
+              <div>
+                <input type="radio" id="arrive" name="etat"value="arrivée" required>
+                <label for="arrive">Arrivée</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="content_right">
+            <input type="submit" id="btn" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
